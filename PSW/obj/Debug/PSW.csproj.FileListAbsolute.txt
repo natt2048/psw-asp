@@ -1,0 +1,4 @@
+c:\users\administrator\documents\visual studio 2010\Projects\PSW\PSW\bin\PSW.dll
+c:\users\administrator\documents\visual studio 2010\Projects\PSW\PSW\bin\PSW.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\PSW\PSW\obj\Debug\PSW.dll
+c:\users\administrator\documents\visual studio 2010\Projects\PSW\PSW\obj\Debug\PSW.pdb

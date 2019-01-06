@@ -1,0 +1,70 @@
+﻿body 
+{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Calibri;
+    font-size: 110%;
+}
+
+header {
+    background-color: #FFCB9A;
+    text-align: center;
+    color: #2C3531;
+    font-size: 200%;
+    font-family: 'Staatliches', cursive;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2C3531;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #116466;
+}
+
+section 
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.formDiv 
+{
+    margin: 5pt;    
+}
+
+.centered 
+{
+    text-align: center;
+}
+
+img 
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+img.small 
+{
+    width: 50pt;
+    float: left;
+}
