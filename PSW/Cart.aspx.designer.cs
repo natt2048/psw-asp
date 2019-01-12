@@ -10,69 +10,78 @@
 namespace PSW {
     
     
-    public partial class Shop {
+    public partial class Cart {
         
         /// <summary>
-        /// cartCount control.
+        /// congrats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cartCount;
+        protected global::System.Web.UI.WebControls.Label congrats;
         
         /// <summary>
-        /// form control.
+        /// order control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form;
+        protected global::System.Web.UI.HtmlControls.HtmlForm order;
         
         /// <summary>
-        /// category control.
+        /// cartList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList category;
+        protected global::System.Web.UI.WebControls.ListView cartList;
         
         /// <summary>
-        /// categoryLabel control.
+        /// shippingList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label categoryLabel;
+        protected global::System.Web.UI.WebControls.DropDownList shippingList;
         
         /// <summary>
-        /// productList control.
+        /// wybranaDostawa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList productList;
+        protected global::System.Web.UI.WebControls.Label wybranaDostawa;
         
         /// <summary>
-        /// btnAddCart control.
+        /// summaryProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddCart;
+        protected global::System.Web.UI.WebControls.Label summaryProducts;
         
         /// <summary>
-        /// Message control.
+        /// summary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Message;
+        protected global::System.Web.UI.WebControls.Label summary;
+        
+        /// <summary>
+        /// btnOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOrder;
     }
 }

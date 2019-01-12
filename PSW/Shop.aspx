@@ -23,6 +23,7 @@
     </nav>
     <section>
         <h2>Dostępne artykuły</h2>
+<asp:Label ID="cartCount" runat="server" Text=""></asp:Label>
         <form id="form" runat="server">
             <asp:RadioButtonList ID="category" runat="server" AutoPostBack="True">
               <asp:ListItem Value="wands">Różdżki</asp:ListItem>
@@ -32,6 +33,8 @@
             <asp:Label ID="categoryLabel" runat="server" Visible="false"><h2>Dostępne produkty:</h2></asp:Label>
             <asp:CheckBoxList ID="productList" runat="server" visible="false"></asp:CheckBoxList>
             <asp:Button ID="btnAddCart" runat="server" Visible="false" text="Dodaj do koszyka"/>
+
+            <asp:Label ID="Message" runat="server" Visible="true"></asp:Label>
        </form>
     </section>
 </body>
