@@ -8,11 +8,17 @@ using System.Collections;
 
 namespace PSW
 {
-    struct Item
+    public partial class Item
     {
         public string name;
         public double price;
         public string image;
+    }
+
+    public partial class CartItem
+    {
+        public int quantity;
+        public Item item;
     }
     
     public partial class Shop : System.Web.UI.Page
@@ -20,6 +26,7 @@ namespace PSW
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            ArrayList cart = null;
             Hashtable listOfProducts = new Hashtable();
             ArrayList wands = new ArrayList();
             wands.Add("W1");
@@ -41,6 +48,28 @@ namespace PSW
 
             if (IsPostBack)
             {
+                if (System.Web.HttpContext.Current.Session["cart"] == null)
+                {
+                    System.Web.HttpContext.Current.Session["cart"] = new ArrayList();
+                }
+
+                cart = (ArrayList)System.Web.HttpContext.Current.Session["cart"];
+                //foreach (CartItem citem in cart)
+                //{
+                //    Message.Text += "w koszyku";
+                //}
+
+                for (int i = 0; i < productList.Items.Count; i++)
+                {
+                    if (productList.Items[i].Selected)
+                    {
+                        //Message.Text += productList.Items[i].Value + "<br />";
+                      
+                        cart.Add(new CartItem { quantity = 1, item = (Item)products[productList.Items[i].Value] });
+                    }
+
+                }
+
                 productList.Visible = true;
                 categoryLabel.Visible = true;
                 btnAddCart.Visible = true;
@@ -48,13 +77,20 @@ namespace PSW
                 foreach (String id in (ArrayList) listOfProducts[Request.Params["category"]])
                     productList.Items.Add(new ListItem("<div><img class=\"small\" src=\"Images/" + ((Item)products[id]).image + "\" /><p><b>" + ((Item)products[id]).name + "</b> (" + ((Item)products[id]).price + "zł)</p></div>", id));
 
-                if (Session["cart"] == null)
-                {
-                    Session.Add("cart", new ArrayList());
-                }
+              
                 //((ArrayList)Session["cart"]).Add(Item);
+
+         
             }
 
+            cart = (ArrayList)System.Web.HttpContext.Current.Session["cart"];
+            int count = 0;
+            if(cart != null) {
+                count = cart.Count;
+            }
+
+            cartCount.Text = "W koszyku: " + count;
+        
         }
     }
 }
